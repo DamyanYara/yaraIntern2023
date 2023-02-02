@@ -11,11 +11,23 @@ body, html{
 
 h1{
     margin-left: 50px;
+    color: #404040;
 }
 
 h2{
     font-weight: normal;
     margin: 25px 0 0 0;
+}
+
+h3{
+    margin-left: 50px;
+    color: #484848
+}
+
+p{
+    margin-left: 50px;
+    margin-bottom: 10;
+    color: #686868;
 }
 
 /* Flexbox Container */
@@ -100,16 +112,44 @@ img{
     margin-left: 50px;
 }
 
-.footer{
+/* Buttons */
+
+.plans-btn{
     margin-left: 50px;
     margin-top: 20px;
-    width: 38%;
+    width: 7%;
     height: 50px;
-    background-color: steelblue;
+    background-color: darkgreen;
     color: white;
     font-size: 20px;
     overflow-x: hidden;
-} 
+    border-radius: 6px 6px 0 0;
+}
+
+.products-btn{
+    /* margin-left: 50px; */
+    /* margin-top: 20px; */
+    width: 9%;
+    height: 50px;
+    background-color: white;
+    color: lightgray;
+    font-size: 20px;
+    overflow-x: hidden;
+    border: 1px solid dodgerblue;
+    border-radius: 6px 6px 0 0;
+}
+
+.search-btn{
+    float: left;
+    width: 4%;
+    height: 26px;
+}
+
+hr{
+    border-top: 2px solid darkgreen;
+    margin-top: 0%;
+    width: 95%;
+}
 
 .input-farmDetails{
     width: 40%;
@@ -122,4 +162,65 @@ img{
     margin-top: 20px;
     font-size: 20px;
 }
+input{
+    width: 80%;
+    font-size: 17px;
+    margin-left: 50px;
+    border: 1px solid dodgerblue;
+    float: left;
+}
 
+
+
+
+/* Side bar */
+
+.nutrition-plan{
+    color: green;
+}
+
+.Ntplan{
+    color: green;
+}
+
+.table{
+    margin-top: 100px; 
+}
+#table-plans{
+    text-align: center;
+    border: 2px solid lightgray;
+    border-left: 0;
+    border-top: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Table Styling */
+thead th:nth-child(1){
+    width: 50%;
+}
+thead th:nth-child(2){
+    width: 15%;
+}
+thead th:nth-child(3){
+    width: 35%;
+}
+thead th:nth-child(4){
+    width:25%;
+}
+thead th:nth-child(5){
+    width:25%;
+}
+thead th:nth-child(6){
+    width:25%;
+}
+thead th:nth-child(7){
+    width:25%;
+}
+thead th:nth-child(8){
+    width:25%;
+}
+
+th,td{
+    padding: 20px;
+}
