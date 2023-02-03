@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="57011448dc08b9372b5e.css">
-    <script src="https://kit.fontawesome.com/29089566fc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 <script defer src="main.js"></script></head>
 <body>
@@ -23,9 +23,9 @@
                 <img src="145ca72503bbd910b4cc.png" alt="Fields">
                 <a href="">Fields</a>
             </div>
-            <div class="nutrition-plan">
-                <img src="ffa73309156e96a0c02b.png" alt="Nutrition Plan">
-                <a href="">Nutrition Plan</a>
+            <div id="sidebar-nutrition" class="nutrition-plan">
+                <img id="Ntplan-image" src="ffa73309156e96a0c02b.png" alt="Nutrition Plan">
+                <a id= "Ntplan" href="">Nutrition Plan</a>
             </div>
             <div class="farm-settings">
                 <img src="7145f8799683abd5abfa.png" alt="Farm Settings">
@@ -37,22 +37,47 @@
         <div class="vertical-container2">
             <div class="heading">
                 <a id = "farm01" href="">Farm 01<i class="arrow right"></i></a>
-                <a id = "farmSettings" href=""> Farm settings<i class="arrow right"></i></a>
-                <span class="farm-details">Farm Details</span>
+                <span class="farm-details">Nutrition Plan Overview</span>
             </div>
-            <h1>Farm Details</h1>
-            <div class="farm-name">
-                <h2>Farm Name</h2>
-                <input class= "input-farmDetails" type="text" value="Farm 01">
+            <h1>Nutrition Plan overview</h1>
+            <p>An overview of crop nutrition plans and recommended products across your farm</p>
+            <div class="btn">
+            <button class="plans-btn">Plans</button>
+            <button class="products-btn">Products</button>
+            <hr>
             </div>
-            <div class="farm-notes">
-                <h2>Farm Notes (optional)</h2>
-                <input class= "input-farmDetails" type="text">
+            <h3>Search</h3>
+
+            <div class="search-input">
+                <input type="text">
+                <p>Sort by edit date:</p>
+                <a href="">Accending</a>
             </div>
-            <button class="footer">Safe farm details</button> 
-            
-            <div class="unassign-farm"><a href="">Unassign Farm</a>
-            </div>
+            <div class="table">
+            <table id= "table-plans">
+                <tr>
+                    <th>Create a new nutrition plan <i class="fa-solid fa-circle-question"></i></th>
+                </tr>
+                <tr>
+                    <th>Active plan </th>
+                    <th>Name</th>
+                    <th>Estimated target yield</th>
+                    <th>Date</th>
+                    <th>Created/Edited by</th>
+                    <th>Edited by</th>
+                    <th>Recommendation by</th>
+                </tr>
+                <tr class="bottom-row">
+                    <td>Active</td>
+                    <td>CNP_Farm01_Maize 1_137.3ha_Maize Grain</td>
+                    <td>10 t/ha</td>
+                    <td>29/01/2023</td>
+                    <td>Maya Krasteva</td>
+                    <td>Maya Krasteva</td>
+                    <td>Atfarm</td>
+                </tr>
+            </table>
+             </div>
             
         </div> 
     </div>

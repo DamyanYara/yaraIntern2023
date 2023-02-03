@@ -23,9 +23,9 @@
                 <img src="images/fields.png" alt="Fields">
                 <a href="">Fields</a>
             </div>
-            <div class="nutrition-plan">
-                <img src="images/nutrition-plan.png" alt="Nutrition Plan">
-                <a class= "Ntplan" href="">Nutrition Plan</a>
+            <div id="sidebar-nutrition" class="nutrition-plan">
+                <img id="Ntplan-image" src="images/nutrition-plan.png" alt="Nutrition Plan">
+                <a id= "Ntplan" href="">Nutrition Plan</a>
             </div>
             <div class="farm-settings">
                 <img src="images/farm-settings.png" alt="Farm Settings">
@@ -50,32 +50,38 @@
 
             <div class="search-input">
                 <input type="text">
+                <p>Sort by edit date:</p>
+                <a href="">Accending</a>
             </div>
-            <div class="table">
-            <table id= "table-plans">
-                <tr>
-                    <th>Create a new nutrition plan <i class="fa-solid fa-circle-question"></i></th>
-                </tr>
-                <tr>
-                    <th>Active plan </th>
-                    <th>Name</th>
-                    <th>Estimated target yield</th>
-                    <th>Date</th>
-                    <th>Created/Edited by</th>
-                    <th>Edited by</th>
-                    <th>Recommendation by</th>
-                </tr>
-                <tr class="bottom-row">
-                    <td>Active</td>
-                    <td>CNP_Farm01_Maize 1_137.3ha_Maize Grain</td>
-                    <td>10 t/ha</td>
-                    <td>29/01/2023</td>
-                    <td>Maya Krasteva</td>
-                    <td>Maya Krasteva</td>
-                    <td>Atfarm</td>
-                </tr>
-            </table>
-             </div>
+            
+            <!-- <div class="outline-table">   -->
+
+            <details>
+                <summary class="outline-table">Maize</summary>
+                <table id= "table-plans">
+                    <tr>
+                        <th>Create a new nutrition plan <img class="plus-icon" src="images/image-plus.png" alt=""></th>
+                    </tr>
+                    <tr>
+                        <th>Active plan </th>
+                        <th>Name</th>
+                        <th>Estimated target yield</th>
+                        <th>Date</th>
+                        <th>Created/Edited by</th>
+                        <th>Edited by</th>
+                        <th>Recommendation by</th>
+                    </tr>
+                    <tr class="bottom-row">
+                        <td>Active</td>
+                        <td>CNP_Farm01_Maize 1_137.3ha_Maize Grain</td>
+                        <td>10 t/ha</td>
+                        <td>29/01/2023</td>
+                        <td>Maya Krasteva</td>
+                        <td>Maya Krasteva</td>
+                        <td>Atfarm</td>
+                    </tr>
+                </table>
+            </details>
             
         </div> 
     </div>

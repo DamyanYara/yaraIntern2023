@@ -58,6 +58,15 @@ p{
     text-decoration: none;
 }
 
+#Ntplan{
+    color: darkgreen;
+}
+
+#Ntplan-image{
+    
+    
+}
+
 .vertical-container a:hover{
     background-color: #ccc;
 
@@ -77,6 +86,10 @@ img{
     width: 50px;
     float: left;
     padding: 10px;
+}
+
+.plus-icon{
+    width: 30px;
 }
 
 .arrow{
@@ -139,11 +152,11 @@ img{
     border-radius: 6px 6px 0 0;
 }
 
-.search-btn{
+/* .search-btn{
     float: left;
     width: 4%;
     height: 26px;
-}
+} */
 
 hr{
     border-top: 2px solid darkgreen;
@@ -175,24 +188,39 @@ input{
 
 /* Side bar */
 
-.nutrition-plan{
+/* .nutrition-plan{
+    color: green;
+} */
+
+#siedbar-nutrition{
     color: green;
 }
 
-.Ntplan{
+a:link.Ntplan{
     color: green;
 }
 
-.table{
-    margin-top: 100px; 
-}
+/* .outline-table{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 10px;
+} */
 #table-plans{
     text-align: center;
     border: 2px solid lightgray;
     border-left: 0;
     border-top: 0;
-    width: 100%;
+    display: flex;
     table-layout: fixed;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.outline-table{
+    width: 100%;
+    height: fit-content;
+    padding-top: 20px;
+    background-color: white;
 }
 
 /* Table Styling */
