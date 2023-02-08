@@ -23,11 +23,30 @@ h3{
     margin-left: 50px;
     color: #484848
 }
+h4{
+   text-align: left;
+}
 
 p{
     margin-left: 50px;
     margin-bottom: 10;
     color: #686868;
+}
+
+/* .input-searchar{
+    margin-right: 10px;
+} */
+
+.searchbar{
+    width: 70%;
+}
+
+.searchbar-paragraph{
+
+}
+
+.top-head-paragraph{
+    display: inline-flex;
 }
 
 /* Flexbox Container */
@@ -86,6 +105,15 @@ img{
     width: 50px;
     float: left;
     padding: 10px;
+}
+
+.searchIcon{
+    width: 50px;
+}
+
+/* Top header Table */
+.top-head-recktangle{
+    width: 50px;
 }
 
 .plus-icon{
@@ -157,6 +185,11 @@ img{
     width: 4%;
     height: 26px;
 } */
+ .search-input{
+   display:flex;
+   font-size: 15px;
+   
+}  
 
 hr{
     border-top: 2px solid darkgreen;
