@@ -11,15 +11,36 @@
     <header>
         <h1>Countdown Timer</h1>
     </header>
+    <!-- The Form witch contains user Input -->
     <div class="start-form" id="add-start-form">
         <div class="start-form-content">
             <label for="date">Choose the Date </label>
-            <input type="text" name="date" id="date">
+            <input type="date" name="date" id="date">
             <label for="hour">Choose the Hour</label>
-            <input type="text" name="hour" id="hour">
+            <input type="time" name="hour" id="hour">
         </div>
         <div class="start-countdown">
-            <button class="btn-start">Start</button>
+            <button id="btn-start">Start</button>
+        </div>
+    </div>
+    <!-- Pop up Frame with ountdown timer -->
+    <div class="modal" id="clock">
+        <h1>Countdown Clock</h1>
+        <div>
+            <span class="days" id="day"></span>
+            <div class="countText">Days</div>
+        </div>
+        <div>
+            <span class="hours" id="clockHour"></span>
+            <div class="countText">Hours</div>
+        </div>
+        <div>
+            <span class="minutes" id="minute"></span>
+            <div class="countText">Minutes</div>
+        </div>
+        <div>
+            <span class="seconds" id="second"></span>
+            <div class="countText">Seconds</div>
         </div>
     </div>
 
