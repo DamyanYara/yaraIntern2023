@@ -14,33 +14,38 @@ const outputSec = document.getElementById('second');
 
 
 // Current Date
-// let date = new Date();
-// let day = date.getDate();
-// let month = date.getMonth() +1;
-// let year = date.getFullYear();
+let date = new Date();
+let day = date.getDate();
+let month = date.getMonth() +1;
+let year = date.getFullYear();
 
 
-// if (month < 10) month = "0" + month;
-// if (day <10) day = "0" + day;
+if (month < 10) month = "0" + month;
+if (day <10) day = "0" + day;
 
-// const todayDate = year + "-" + month + "-" + day;
-// currentDateElement.value = todayDate;
+const todayDate = year + "-" + month + "-" + day;
+currentDateElement.value = todayDate;
 
+// Pop - Up windown, when click on button
 const toggleClockModul = () => {
     popUpWindow.classList.toggle('visible');
 };
 
 function userInputDate(){
+    //get Time Value    
     const inputTime = currentTimeElement.value;
     let inputHour = 0;
     let inputMin = 0;
+    // when the input is not empty, get the value from the input
     if(inputTime != ""){
         const inputTimeElemets = inputTime.split(":");
         inputHour = inputTimeElemets[0];
         inputMin = inputTimeElemets[1];
     }
-   
+    // Getting the input date value
      const inputDate = currentDateElement.value;
+     // assigning the input value and using split 
+     console.log(inputDate);
      const inputDateElement = inputDate.split("-"); //Split String into Numbers 
      const futurDate = new Date(inputDateElement[0], (inputDateElement[1] -1), inputDateElement[2], inputHour, inputMin);
      console.log(futurDate);
@@ -51,6 +56,7 @@ function userInputDate(){
 function sas (futurDate) {
     const now = Date.now();
 
+    //difference between selected date and now
     const difference = futurDate - now;
 
     let days = Math.floor(difference/(1000*60*60*24));
@@ -64,7 +70,7 @@ function sas (futurDate) {
     outputSec.textContent = seconds;
 }
 
-
+// Eventlistener triggers when the button is clicked
 startCountdown.addEventListener('click',function (){
     toggleClockModul();
     const futurDate =  userInputDate();

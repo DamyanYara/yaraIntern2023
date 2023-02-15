@@ -1,20 +1,18 @@
 header{
     width: 100%;
-    height: 4rem;
+    /* height: 4rem; */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #43C6DB;
+    background-color:#00ECB9;
     padding: 0 2.5rem;
 }
 .start-form{
     position: fixed;
-    /* z-index: 100; */
     background-color: white;
     border-radius: 10px;
-    width: 80%;
-    top: 30vh;
-    /* left: 10%;  */
+    width: 90%;
+    top: 40vh;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 
 }
@@ -26,7 +24,7 @@ header{
 #add-start-form .start-form-content{
     display:flex;
     flex-direction: column;
-    background-color:  #43C6DB;
+    background-color:  #00ECB9;
 }
 
 .start-form .start-countdown{
@@ -65,28 +63,47 @@ header{
 }
 
 #clock > div{
-    padding: 15px;
+    padding: 30px;
     border-radius: 3px;
     background: #00BF96;
     display: inline-block;
 }
 
 #clock div > span{
-    padding: 15px;
+    padding: 20px;
     border-radius: 3px;
-    background: #00816A;
+    background: #BE975B;
     display: inline-block;
 }
 
 .countText{
     padding-top: 5px;
-    font-size: 16px;
+    font-size: 18px;
+    color: #6E470B;
 }
 
 h1{
-    color: #396;
+    color: #BE975B;
     font-weight: 100;
     font-size: 40px;
     margin: 40px 0px 20px;
 }
+
+#reset{
+    width: 30%;
+    height: 3%;
+    padding-top: 5px;
+    color: white;
+    background-color:#BE975B;
+}
+
+.header_text{
+    color: aliceblue;
+} 
+
+body{
+    background-color: #BE975B;
+}
+
+
 
