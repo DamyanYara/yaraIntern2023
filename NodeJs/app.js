@@ -1,6 +1,9 @@
 const http = require('http');
 const bodyParser = require('body-parser');
 
+const Supplier = require('./models/supplier');
+const Warehouse = require('./models/warehouse');
+
 const express = require('express');
 
 const app = express();
@@ -16,8 +19,14 @@ app.use('/', (req, res, next) => {
     res.redirect('/')
 });
 
-sequelize.authenticate().then(console.log);
+sequelize.sync().then(result =>{
+   // console.log(result);
+    app.listen(3000);
+})
+.catch(err => {
+    console.log(err)
+});
 
 //create Server Callback
-app.listen(3000);
+
 

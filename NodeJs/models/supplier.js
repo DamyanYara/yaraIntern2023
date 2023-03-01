@@ -29,3 +29,5 @@ const Supplier = sequelize.define('supplier',{
         type: Sequelize.INTEGER,
     }
 });
+
+module.exports = Supplier;
