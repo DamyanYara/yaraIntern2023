@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 
 const Supplier = require('./models/supplier');
 const Warehouse = require('./models/warehouse');
+const Product = require('./models/product');
+const Inventory = require('./models/inventory');
 
 const express = require('express');
 
@@ -19,7 +21,7 @@ app.use('/', (req, res, next) => {
     res.redirect('/')
 });
 
-sequelize.sync().then(result =>{
+sequelize.sync({alter:true}).then(result =>{
    // console.log(result);
     app.listen(3000);
 })
