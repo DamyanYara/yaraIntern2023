@@ -11,7 +11,7 @@ exports.addSupplier = (req, res) =>{
         lastName: lastName,
         address: address,
         email: email,
-        phone:phone
+        phone:phone 
     }).then(result =>{
         console.log('Created Supplier');
     }).catch(err =>{

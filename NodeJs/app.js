@@ -14,6 +14,7 @@ const sequelize = require('./util/database');
 
 const adminRoutes = require('./routes/admin');
 
+const CreateSupplier = require('./insertData/insertSupplier');
 
 app.use(bodyParser.urlencoded({extended:false}));
 
@@ -21,13 +22,16 @@ app.use('/', (req, res, next) => {
     res.redirect('/')
 });
 
-sequelize.sync({alter:true}).then(result =>{
-   // console.log(result);
+sequelize.sync({alter:true}).then(async (result) =>{
+    await CreateSupplier('Ginka', 'Petrova', 'ulica8', 'g.petrova@gmail.com',089444888);
     app.listen(3000);
+
 })
 .catch(err => {
     console.log(err)
 });
+
+
 
 //create Server Callback
 
