@@ -31,6 +31,11 @@ const Inventory = sequelize.define('inventory', {
         }
     },
 
+    quantity:{
+        type: Sequelize.INTEGER,
+        allowNull: false,
+    }
+
 });
 
 module.exports = Inventory;

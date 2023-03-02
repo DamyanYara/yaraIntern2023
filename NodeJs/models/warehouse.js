@@ -17,9 +17,6 @@ const Warehouse = sequelize.define('warehouse',{
         type: Sequelize.STRING(250),
         allowNull: false,
     },
-    ts:{
-        type: Sequelize.DATE  
-    }
 });
 
 module.exports = Warehouse;

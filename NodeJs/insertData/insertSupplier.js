@@ -3,7 +3,7 @@ const Supplier = require('../models/supplier');
 
 module.exports = async(firstName, lastName, address, email, phone) =>{
     await Supplier.create({
-        firstName: firstName,
+        name: firstName,
         lastName: lastName,
         address: address,
         email: email,
