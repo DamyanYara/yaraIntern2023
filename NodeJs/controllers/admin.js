@@ -1,32 +1,28 @@
 const  Sequelize = require('sequelize');
 
-//const db = require('../util/database');
+const sequelize = require('../util/database');
 
-class UsersServie{
-    constructor(pool){
-        this.pool = pool
-    }
 
-    async getAllUsers(){
+   const getAllUsers = async() =>{
         const query = 'SELECT * FROM users';
-        const {rows} = await this.pool.query(query);
+        const [rows, x ] = await sequelize.query(query);
+        console.log('Enter in the Rout');
         return rows;
     }
 
-    async getUserByID(userId) {
-        const query = 'SELECT * FROM users WHERE id= $1';
-        const {rows} = await this.pool.query(query, [userId]);
-        return rows[0];
+    const getUserByID= async(userId) =>{
+        const query = `SELECT * FROM users WHERE user_id= ${userId}`;
+        const [rows, x] = await sequelize.query(query, [userId]);
+        return rows;
     }
-
-    async createUser(user){
-        const {email, password} = user;
-        const query = 'SELECT * FROM users (email, password) VALUES($1, $2) RETURNING *';
+    
+    const createUser = async(email, password)=>{
+        const query = `INSERT INTO users (email, password) VALUES(${email}, ${password})`;
         const values = [email, password];
-        const {rows} = await this.pool.query(query, values);
-        return rows[0];
+        const [rows,x] = await sequelize.query(query);
+        return rows;
     }
-
+    /*
     async updaterUser(userId, updaterUser){
         const {email, password} = updaterUser;
         const query = 'UPDATE users SET email = $1, password=$2 WHERE id = $3 RETURNING *';
@@ -40,6 +36,5 @@ class UsersServie{
         const {rows} = await this.pool.query(query, [userId]);
         return rows[0];
     }
-}
-
-module.exports = UsersServices;
+    **/
+module.exports = {getAllUsers, getUserByID, createUser} ;

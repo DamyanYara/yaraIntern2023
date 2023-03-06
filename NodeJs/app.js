@@ -1,6 +1,8 @@
 const http = require('http');
 const bodyParser = require('body-parser');
 
+const UserRouts = require('./routes/admin');
+
 const Supplier = require('./models/supplier');
 const Warehouse = require('./models/warehouse');
 const Product = require('./models/product');
@@ -10,6 +12,7 @@ const Inventory = require('./models/inventory');
 const express = require('express');
 
 const app = express();
+app.use(express.json());
 
 const sequelize = require('./util/database');
 
@@ -30,9 +33,7 @@ const User = require('./models/user');
 
 app.use(bodyParser.urlencoded({extended:false}));
 
-app.use('/', (req, res, next) => {
-    res.redirect('/')
-});
+app.use('/users', UserRouts) 
 
 sequelize.sync({alter:true}).then(async (result) =>{
 
@@ -56,12 +57,14 @@ sequelize.sync({alter:true}).then(async (result) =>{
         await CreateInventory(5,8,169);
     }
     **/
-    app.listen(3000);
+  
 
 })
 .catch(err => {
     console.log(err)
 });
+
+app.listen(3000);
 
 
 
