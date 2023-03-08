@@ -1,6 +1,6 @@
 // Insert Values for User:
 const bcrypt = require('bcrypt');
-const { Pool } = require('pg');
+//const { Pool } = require('pg');
 const User = require('../models/user');
 
 module.exports = async(email, password) => {
